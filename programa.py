@@ -4,7 +4,7 @@ def menu():
     print("2. Saída de dados")
     print("3. Editar dados")
     print("4. Deletar dados")
-    print("5. Saída de dados vetor")
+    print("5. Grava saída de dados vetor")
     print("6. Sair")
 
     opcao = input("Selecione uma opção: ")
@@ -49,6 +49,16 @@ def saida_dados_vetor():
     print("#*** laranja *** ")
     print(laranja_dados)
     print("")
+    print("Gravado com sucesso")
+
+
+    cana_string = ','.join(map(str, cana_dados))
+    laranja_string = ','.join(map(str, laranja_dados))
+    saida = cana_string + "\n" + laranja_string
+
+    f = open('output.txt', 'w')
+    f.write(saida)
+    f.close()
 
 def editar_dados():
     cultura_num = int(input("Qual cultura deseja editar? (1 - Cana ou 2 - Laranja): "))
