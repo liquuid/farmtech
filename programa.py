@@ -54,7 +54,7 @@ def saida_dados_vetor():
 
     cana_string = ','.join(map(str, cana_dados))
     laranja_string = ','.join(map(str, laranja_dados))
-    saida = cana_string + "\n" + laranja_string
+    saida = cana_string + "\n" + laranja_string + "\n"
 
     f = open('output.txt', 'w')
     f.write(saida)
