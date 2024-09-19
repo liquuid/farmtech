@@ -4,7 +4,8 @@ def menu():
     print("2. Saída de dados")
     print("3. Editar dados")
     print("4. Deletar dados")
-    print("5. Sair")
+    print("5. Saída de dados vetor")
+    print("6. Sair")
 
     opcao = input("Selecione uma opção: ")
     return opcao
@@ -40,6 +41,14 @@ def saida_dados():
     print(f"{'Nitrogênio por m²:':<20} {laranja_dados[2]:^10} total necessário: {laranja_dados[2]*laranja_dados[0]*laranja_dados[1]}")
     print(f"{'Fósforo por m²:':<20} {laranja_dados[3]:^10} total necessário: {laranja_dados[3]*laranja_dados[0]*laranja_dados[1]}")
     print(f"{'Potássio por m²:':<20} {laranja_dados[4]:^10} total necessário: {laranja_dados[4]*laranja_dados[0]*laranja_dados[1]}")
+
+def saida_dados_vetor():
+    print("\n#*** cana *** ")
+    print(cana_dados)
+    print("")
+    print("#*** laranja *** ")
+    print(laranja_dados)
+    print("")
 
 def editar_dados():
     cultura_num = int(input("Qual cultura deseja editar? (1 - Cana ou 2 - Laranja): "))
@@ -90,6 +99,8 @@ def main():
         elif opcao == '4':
             deletar_dados()
         elif opcao == '5':
+            saida_dados_vetor()
+        elif opcao == '6':
             print("Encerrando o programa.")
             break
         else:
